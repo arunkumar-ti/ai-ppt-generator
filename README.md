@@ -60,6 +60,42 @@ npm run start
 }
 ```
 
+**Example cURL:**
+
+```bash
+curl -X POST http://localhost:3000/ppt/generate \
+-H "Content-Type: application/json" \
+-d '{"topic": "Artificial Intelligence", "slideCount": 5}' \
+-o output.pptx
+```
+
+---
+
+## 🛠️ Tech Stack
+
+- **NestJS** – Backend framework
+- **Mistral AI** – Language model for content generation
+- **PPTX-GenJS** – PowerPoint generation library
+- **TypeScript** – Type-safe development
+
+---
+
+## 🐞 Troubleshooting
+
+| Problem            | Solution                                                 |
+| ------------------ | -------------------------------------------------------- |
+| `Model not found`  | Check your Mistral API key and permissions               |
+| `Empty slides`     | Ensure slide content is properly passed to the generator |
+| `Alignment issues` | Adjust `x`, `y`, `w`, `h` values in `addText` options    |
+
+---
+
+## 🏆 Best Practices
+
+✅ Keep slide content under 800 characters to prevent overflow  
+✅ Adjust font size dynamically for better readability  
+✅ Use consistent styling for a professional look
+
 ---
 
 ## 👨‍💻 **Author**
